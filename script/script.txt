@@ -1,0 +1,23 @@
+# Draft Script
+
+Hello, and welcome to this video tutorial in which we'll learn how to deploy ElasticSearch and Kafka in a DKP managed kubernetes cluster. 
+
+As a solutions architect, you know that choosing the right tools for your architecture is critical for success. ElasticSearch and Kafka are two powerful technologies that can help you build scalable, reliable, and efficient data driven systems and by the end of this video, I'll walk you through the process of setting up a custom catalogue of all the tools we'll need to build such a pipeline, backed up by an Enterprise CD pipeline and a full stack of logging, security
+
+Let's start with ElasticSearch. ElasticSearch is a distributed, open-source search and analytics engine that can store, search, and analyze large volumes of data in real-time. It's based on the Lucene search library and provides a RESTful API that makes it easy to integrate with other applications. ElasticSearch is commonly used for log analysis, search engines, and business intelligence applications.
+
+Now, let's talk about Kafka. Kafka is a distributed streaming platform that allows you to build real-time data pipelines and stream processing applications. It's designed to handle high volumes of data and provides features like fault-tolerance, scalability, and low-latency processing. Kafka uses a publish-subscribe model, where producers send messages to topics, and consumers subscribe to those topics to receive messages.
+
+So why use ElasticSearch and Kafka in Kubernetes? Well, Kubernetes is a popular container orchestration platform that allows you to deploy and manage applications at scale. ElasticSearch and Kafka are both designed to run in a distributed environment, which makes them a great fit for Kubernetes. By running ElasticSearch and Kafka in Kubernetes, you can take advantage of Kubernetes' built-in features like auto-scaling, high availability, and fault-tolerance.
+
+Let's talk about some pros and cons of using ElasticSearch and Kafka in Kubernetes. One of the main advantages is scalability. ElasticSearch and Kafka are both designed to scale horizontally, which means you can add more nodes as your data volume grows. Kubernetes makes it easy to add and remove nodes as needed, which makes it a great platform for running ElasticSearch and Kafka.
+
+Another advantage is fault-tolerance. ElasticSearch and Kafka both provide features like replication and partitioning, which means that if a node fails, your data will still be available. Kubernetes also provides features like automatic node replacement, which means that if a node fails, Kubernetes will automatically spin up a new node to replace it.
+
+However, there are some potential drawbacks to running ElasticSearch and Kafka in Kubernetes, the main one being complexity. Running distributed systems like ElasticSearch and Kafka can be complex, and running them in Kubernetes adds another layer of complexity. You'll need to make sure that your Kubernetes cluster is properly configured to handle the specific needs of ElasticSearch and Kafka.
+
+So how can we mitigate those complexities using the DKP platform. Well firstly, the DKP Enterprise Platform provides a simplified deployment process for ElasticSearch and Kafka using operators, managed by a continuous deployment pipeline straight out of the box. The custom catalogue features we're about to see take care of the complexities of a great deal of the configuration heavy lift and make a single click deployment a breeze. The Enterprise Platform includes advanced features like auto-scaling and automated upgrades, which can help ensure high availability and reduce downtime but, more importantly, it includes built-in monitoring and logging capabilities, which can help you quickly identify and troubleshoot issues with your data pipelines.
+
+Lastly, the DKP Enterprise Platform includes a range of security features, including RBAC, network segmentation, and encryption, which can help you secure your ElasticSearch and Kafka clusters in Kubernetes.
+
+In summary, ElasticSearch and Kafka are powerful technologies that can help you build scalable, reliable, and efficient systems. Running them in Kubernetes can help you take advantage of Kubernetes' built-in features like auto-scaling, high availability, and fault-tolerance. However, running distributed systems in Kubernetes can be complex, and may require careful planning and optimization to achieve optimal performance. By leveraging the DKP Enterprise Platform, you can simplify the deployment, scaling, monitoring, and security of ElasticSearch and Kafka in Kubernetes, and reduce the overall complexity and overhead of running these distributed systems.
