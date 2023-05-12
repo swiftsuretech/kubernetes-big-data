@@ -1,0 +1,9 @@
+1/ Build the management cluster (use script in ./clusters)
+2/ Log into kommander and apply license key
+RECORD
+3/ Create workspace elasticsearch elasticsearch-workspace
+4/ Add infra provider arn:aws:iam::222638339470:role/whitehouse-kommander
+5/ Build a cluster in es workspace
+6/ Leave recording with log highlighted
+
+

@@ -1,0 +1,45 @@
+apiVersion: config.kommander.mesosphere.io/v1alpha1
+kind: Installation
+apps:
+  dex:
+    enabled: true
+  dex-k8s-authenticator:
+    enabled: true
+  dkp-insights-management:
+    enabled: true
+  gatekeeper:
+    enabled: true
+  gitea:
+    enabled: true
+  grafana-logging:
+    enabled: true
+  grafana-loki:
+    enabled: true
+  kommander:
+    enabled: true
+  kube-prometheus-stack:
+    enabled: true
+  kubefed:
+    enabled: true
+  kubernetes-dashboard:
+    enabled: true
+  kubetunnel:
+    enabled: true
+  logging-operator:
+    enabled: true
+  prometheus-adapter:
+    enabled: true
+  reloader:
+    enabled: true
+  rook-ceph:
+    enabled: true
+  rook-ceph-cluster:
+    enabled: true
+  traefik:
+    enabled: true
+  traefik-forward-auth-mgmt:
+    enabled: true
+  velero:
+    enabled: true
+ageEncryptionSecretName: sops-age
+clusterHostname: "demo-app.cloud"
