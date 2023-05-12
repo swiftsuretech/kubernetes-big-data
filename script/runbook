@@ -7,3 +7,5 @@ RECORD
 6/ Leave recording with log highlighted
 
 
+Install CRDs:
+kubectl create -f https://download.elastic.co/downloads/eck/2.7.0/crds.yaml

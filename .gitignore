@@ -1,2 +1,5 @@
 clusters/elasticsearch.conf
 .gitignore
+clusters/combined.conf
+clusters/slave.conf
+.gitignore
