@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: elastic
-  namespace: ${releaseNamespace}
+  namespace: elasticsearch-workspace
 spec:
   chart:
     spec:
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: elastic
-        namespace: ${releaseNamespace}
+        namespace: elasticsearch-workspace
   interval: 15s
   install:
     remediation:
@@ -21,4 +21,4 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  targetNamespace: ${releaseNamespace}
+  targetNamespace: elasticsearch-workspace
