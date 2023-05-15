@@ -39,6 +39,7 @@ Switch context to the worker cluster:
 - Check git repos are healthy and in the right namespace (source.toolkit.fluxcd.io)
 - Check helm releases are healthy and in the right namespace (helm.fluxcd.io)
 - Check kustomizations are healthy and in the right namespace (kustomize.toolkit.fluxcd.io)
+- Check helmcharts are healthy
 
 - check helm-controller logs in kommander-flux namespace
 
