@@ -3,9 +3,9 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: bitnami
-  namespace: ${releaseNamespace}
+  namespace: elastic-project
   labels:
     kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
-  url: https://charts.bitnami.com/bitnami
+  url: "${helmMirrorURL:=https://charts.bitnami.com/bitnami}"
   interval: 5m

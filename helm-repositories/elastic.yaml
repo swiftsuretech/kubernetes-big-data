@@ -3,9 +3,9 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: elastic
-  namespace: ${releaseNamespace}
+  namespace: elastic-project
   labels:
     kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
-  url: https://helm.elastic.co
+  url: "${helmMirrorURL:=https://helm.elastic.co}"
   interval: 5m
