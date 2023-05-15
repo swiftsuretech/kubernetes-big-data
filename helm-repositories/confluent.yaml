@@ -1,9 +1,9 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: confluent
-  namespace: elastic-project
+  namespace: ${releaseNamespace}
   labels:
     kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
