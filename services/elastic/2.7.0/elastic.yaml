@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: elastic
-  namespace: ${releaseNamespace}
+  namespace: elastic-operator
 spec:
   chart:
     spec:
