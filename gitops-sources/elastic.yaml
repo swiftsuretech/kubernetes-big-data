@@ -1,0 +1,12 @@
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: elastic-cluster
+  namespace: elastic-project
+spec:
+  cloneUrl: https://github.com/d2iq-ps/elasticsearch
+  template:
+    path: ./artifacts/my-elastic-cluster
+    ref:
+      branch: main
+    suspend: false

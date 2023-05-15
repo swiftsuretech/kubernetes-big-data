@@ -1,0 +1,15 @@
+apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
+kind: Project
+metadata:
+  annotations:
+    kommander.mesosphere.io/description: 'A project space for elastic stuff'
+    kommander.mesosphere.io/display-name: elastic-project
+  name: elastic-project
+  namespace: elasticsearch-workspace
+spec:
+  namespaceName: elastic-project
+  placement:
+    clusters:
+      - name: elastic-search-cluster
+  workspaceRef:
+    name: elasticsearch-workspace
