@@ -7,5 +7,5 @@ metadata:
   labels:
     kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
-  url: "${helmMirrorURL:=https://packages.confluent.io/helm}"
+  url: https://packages.confluent.io/helm
   interval: 5m
