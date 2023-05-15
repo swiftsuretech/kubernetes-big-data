@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: confluent
+  name: confluent-dw
   namespace: ${releaseNamespace}
   labels:
     kommander.d2iq.io/dkp-airgapped: unsupported
