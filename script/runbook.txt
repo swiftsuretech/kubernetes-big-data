@@ -1,6 +1,9 @@
+Process:
+
 1/ Build the management cluster (use script in ./clusters)
 2/ Log into kommander and apply license key
-RECORD
+
+SCREEN RECORD
 3/ Create workspace elasticsearch, elasticsearch-workspace, confluent
 4/ Add infra provider arn:aws:iam::222638339470:role/whitehouse-kommander
 5/ Build a cluster in es workspace
@@ -19,3 +22,7 @@ in UI
 Install Catalogue: (MGT Cluster)
 kubectl create -f ./artifacts/catalogue.yaml
 
+
+Troubleshooting Catalogue:
+
+- Github repo needs to be deployed to the management cluster. Check its health
