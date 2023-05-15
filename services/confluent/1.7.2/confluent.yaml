@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: confluent
-  namespace: elasticsearch-workspace
+  namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
@@ -11,8 +11,8 @@ spec:
       version: 1.7.2
       sourceRef:
         kind: HelmRepository
-        name: confluent
-        namespace: elasticsearch-workspace
+        name: confluent-dw
+        namespace: ${workspaceNamespace}
   interval: 15s
   install:
     remediation:
