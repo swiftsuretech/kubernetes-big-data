@@ -1,14 +1,21 @@
 1/ Build the management cluster (use script in ./clusters)
 2/ Log into kommander and apply license key
 RECORD
-3/ Create workspace elasticsearch elasticsearch-workspace
+3/ Create workspace elasticsearch, elasticsearch-workspace, confluent
 4/ Add infra provider arn:aws:iam::222638339470:role/whitehouse-kommander
 5/ Build a cluster in es workspace
 6/ Leave recording with log highlighted
 
-
+Don't show but in mgt:
 Install CRDs:
 kubectl create -f https://download.elastic.co/downloads/eck/2.7.0/crds.yaml
+kubectl create -f https://raw.githubusercontent.com/confluentinc/confluent-kubernetes-examples/master/quickstart-deploy/confluent-platform.yaml
 
+in UI
 
-Push the catalogue in artifacts/ into the namespace of the project in the MANAGEMENT CLUSTER
+- In new namespace turn on all logging and storage stuff
+8/ Create a new project called test
+
+Install Catalogue: (MGT Cluster)
+kubectl create -f ./artifacts/catalogue.yaml
+
