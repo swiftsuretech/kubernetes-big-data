@@ -28,4 +28,17 @@ kubectl create -f ./artifacts/catalogue.yaml
 
 Troubleshooting Catalogue:
 
-- Github repo needs to be deployed to the management cluster. Check its health
+- Github catalogue repo needs to be deployed to the management cluster. Check its health in the management cluster
+- Check the following in apps.kommander.d2iq.io in the correct namespace:
+    - App
+    - AppDeployment
+
+Switch context to the worker cluster:
+
+- Check helm repos are healthy and in the right namespace (source.toolkit.fluxcd.io)
+- Check git repos are healthy and in the right namespace (source.toolkit.fluxcd.io)
+- Check helm releases are healthy and in the right namespace (helm.fluxcd.io)
+- Check kustomizations are healthy and in the right namespace (kustomize.toolkit.fluxcd.io)
+
+- check helm-controller logs in kommander-flux namespace
+

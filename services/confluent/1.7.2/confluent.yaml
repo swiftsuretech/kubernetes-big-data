@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: confluent-dw
-        namespace: ${workspaceNamespace}
+        namespace: ${releaseNamespace}
   interval: 15s
   install:
     remediation:
