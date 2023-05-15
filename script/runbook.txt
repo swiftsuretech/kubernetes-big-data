@@ -12,6 +12,9 @@ SCREEN RECORD
 Don't show but in mgt:
 Install CRDs:
 kubectl create -f https://download.elastic.co/downloads/eck/2.7.0/crds.yaml
+kubectl apply -f https://download.elastic.co/downloads/eck/2.7.0/operator.yaml
+
+
 kubectl create -f https://raw.githubusercontent.com/confluentinc/confluent-kubernetes-examples/master/quickstart-deploy/confluent-platform.yaml
 
 in UI
