@@ -1,0 +1,26 @@
+displayName: Logstash
+description: A tool for managing events and logs.
+category:
+  - My Elastic Stack
+type: catalog
+scope:
+  - project
+  - workspace
+overview: |-
+  # Overview
+  Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite "stash."
+
+  # Features
+  It supports a wide range of input plugins, including file, syslog, beats, and Kafka, and output plugins, including Elasticsearch, Amazon S3, and Kafka.
+  
+  Logstash allows you to manipulate data using a variety of filters, such as grok, mutate, and date, and to enrich data using lookups from external data sources.
+  
+  It supports pipelining of data processing, allowing you to create complex data processing workflows with multiple stages.
+  
+  Logstash provides a monitoring API that allows you to monitor the health and performance of your Logstash instance.
+  
+  It also supports plugins that allow you to extend its functionality, such as the Elasticsearch SQL plugin and the JDBC input plugin.
+  
+  Logstash can be run as a standalone tool or as part of the Elastic Stack, which includes Elasticsearch and Kibana, for a complete data processing and visualization solution.
+
+icon: PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgODAgODAiIHdpZHRoPSIyNTAwIiBoZWlnaHQ9IjI1MDAiPjxzdHlsZT4uc3Qwe2ZpbGw6I2YzYmQxOX0uc3Qxe2ZpbGw6IzIzMWYyMH0uc3Qye2ZpbGw6IzNlYmViMH0uc3Qze2ZpbGw6IzM3YTU5NX0uc3Q0e2ZpbGw6bm9uZX08L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MS4xIDQxLjlIMTUuNlYxMi41aDcuN2M5LjkgMCAxNy44IDggMTcuOCAxNy44djExLjZ6Ii8+PHBhdGggY2xhc3M9InN0MSIgZD0iTTQxLjEgNjcuNWMtMTQuMSAwLTI1LjYtMTEuNC0yNS42LTI1LjZoMjUuNnYyNS42eiIvPjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik00MS4xIDQxLjloMjMuM3YyNS42SDQxLjF6Ii8+PHBhdGggY2xhc3M9InN0MyIgZD0iTTQxLjEgNDEuOWg1LjR2MjUuNmgtNS40eiIvPjxwYXRoIGNsYXNzPSJzdDQiIGQ9Ik0wIDBoODB2ODBIMHoiLz48L3N2Zz4=
