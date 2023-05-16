@@ -1,11 +1,11 @@
 eval $(maws li general-services)
 
-export CLUSTER_NAME=elastic-mgt
+export CLUSTER_NAME=elastic-management
 
 dkp create cluster aws --cluster-name=$CLUSTER_NAME \
     --additional-tags=owner=$(whoami) \
     --additional-tags=expiration=5d \
-    -with-aws-bootstrap-credentials=true \
+    --with-aws-bootstrap-credentials=true \
     --self-managed
     --registry-mirror-url=https://registry-1.docker.io \
     --registry-mirror-username="dswhitehouse" \
