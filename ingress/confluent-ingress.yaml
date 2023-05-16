@@ -1,0 +1,30 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefixes-confluent
+spec:
+  stripPrefix:
+    prefixes:
+    - /confluent
+---    
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: kommander-traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: elasticsearch-workspace-stripprefixes-confluent@kubernetescrd
+  name: confluent-ingress
+  namespace: elasticsearch-workspace  # Must match service namespace
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: controlcenter-0-internal
+            port:
+              number: 9021
+        path: /confluent
+        pathType: Prefix
