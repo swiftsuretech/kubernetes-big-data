@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elasticsearch-workspace-logstash-1
+  namespace: elasticsearch-workspace
+data:
+  logstash.conf: |-
+    input {
+    file {
+      path => ["/var/log/dpkg.log"]
+      sincedb_path => "/dev/null"
+      start_position => "beginning"
+      }
+    }
+    output {
+        elasticsearch {
+          hosts => ['my-elastic-cluster-es-internal-http.elastic-project.svc.cluster.local:9200']
+          user => 'elastic'
+          index => 'test'
+          password => 'elastic'
+          ssl_certificate_verification => false
+          ssl => true
+        }
+    }
