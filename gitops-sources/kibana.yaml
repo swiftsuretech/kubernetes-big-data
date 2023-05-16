@@ -9,4 +9,4 @@ spec:
     path: ./artifacts/my-kibana
     ref:
       branch: main
-    suspend: false
+    suspend: true

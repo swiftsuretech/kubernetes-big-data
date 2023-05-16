@@ -1,12 +1,11 @@
 apiVersion: dispatch.d2iq.io/v1alpha2
 kind: GitopsRepository
 metadata:
-  name: elastic-cluster
+  name: my-confluent
   namespace: elastic-project
-spec:
   cloneUrl: https://github.com/d2iq-ps/elasticsearch
   template:
-    path: ./artifacts/my-elastic-cluster
+    path: ./artifacts/my-kibana
     ref:
       branch: main
     suspend: true
