@@ -14,5 +14,3 @@ spec:
         env:
           - name: SERVER_BASEPATH
             value: /kibana
-  config:
-    server.publicBaseUrl: https://elastic.demo-app.cloud
