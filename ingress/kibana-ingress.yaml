@@ -1,0 +1,30 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefixes-kibana
+spec:
+  stripPrefix:
+    prefixes:
+    - /kibana
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: kommander-traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: elasticsearch-workspace-stripprefixes-kibana@kubernetescrd 
+  name: kibana-ingress
+  namespace: elastic-project  # Must match service namespace
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: my-kibana-kb-http
+            port:
+              number: 5601
+        path: /kibana
+        pathType: Prefix
