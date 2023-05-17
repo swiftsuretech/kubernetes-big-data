@@ -6,6 +6,6 @@ spec:
   version: 8.7.1
   nodeSets:
   - name: default
-    count: 5
+    count: 4
     config:
       node.store.allow_mmap: false
