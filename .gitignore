@@ -3,3 +3,4 @@ clusters/elasticsearch.conf
 clusters/combined.conf
 clusters/slave.conf
 .gitignore
+secret
