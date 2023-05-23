@@ -1,0 +1,56 @@
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+
+
+helm install elastic-exporter prometheus-community/prometheus-elasticsearch-exporter \
+    --namespace elastic-project \
+    --set es.uri="https://elastic:elastic@my-elastic-cluster-es-http:9200" \
+    --set es.sslSkipVerify=true
+
+FQDN if reqd: http://elastic-exporter-prometheus-elasticsearch-exporter.elastic-project.svc.cluster.local:9114
+
+- Ensure service has annotation:
+
+    prometheus.io/scrape: 'true'
+
+- and label:
+
+    operated-prometheus: true 
+
+---
+add servicemonitor
+---
+cat << EOF | kubectl apply -f -
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    prometheus.kommander.d2iq.io/select: "true"
+  name: elastic-project
+  namespace: elastic-cluster
+spec:
+  endpoints:
+  - port: http
+  selector:
+    matchLabels:
+        app: prometheus-elasticsearch-exporter
+EOF
+----
+prometheus-thanos-traefik-0.0.1-d2iq-defaults
+
+Append:
+
+
+      additionalServiceMonitors:
+        - name: elastic-monitor
+          selector:
+            matchLabels:
+              app: prometheus-elasticsearch-exporter
+          namespaceSelector:
+            matchNames:
+              - elastic-cluster
+          endpoints:
+            - port: metrics
+              interval: 30s
+
+

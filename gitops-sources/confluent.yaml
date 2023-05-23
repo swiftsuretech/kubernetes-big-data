@@ -3,6 +3,7 @@ kind: GitopsRepository
 metadata:
   name: my-confluent
   namespace: elastic-project
+spec:
   cloneUrl: https://github.com/d2iq-ps/elasticsearch
   template:
     path: ./artifacts/my-kibana

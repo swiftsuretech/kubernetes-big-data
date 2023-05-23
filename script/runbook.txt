@@ -9,6 +9,12 @@ SCREEN RECORD
 5/ Build a cluster in es workspace
 6/ Leave recording with log highlighted
 
+export AZURE_SUBSCRIPTION_ID="b769519a-128a-4d35-b8ab-489774db5970"
+export AZURE_TENANT_ID="a98e3fd4-b172-4731-9f98-7038f712e693"
+export AZURE_CLIENT_ID="10984f34-e1e0-4492-a3e2-1a526ee365a2"
+export AZURE_CLIENT_SECRET="X4G8Q~ovzROJDl9Ux6rTYWIvmMbGFu6Ctpsv9aJb"
+
+
 Don't show but in mgt:
 Install CRDs:
 kubectl create -f https://download.elastic.co/downloads/eck/2.7.0/crds.yaml

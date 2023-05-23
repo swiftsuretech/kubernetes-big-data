@@ -1,0 +1,31 @@
+Tip 1:
+
+Organise your life
+
+- hard multi-tenancy is inefficient and can be costly
+
+---
+Tip 2:
+
+Use custom applications / catalogue
+
+
+---
+Tip 3:
+
+
+
+---
+Tip 4:
+
+
+Manage your access using Enterprise grade Identity brokerage
+
+---
+Tip 5:
+
+Alerting and monitoring
+
+Bonus Tip:
+
+Everything as Code

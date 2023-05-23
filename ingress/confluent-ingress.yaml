@@ -14,9 +14,9 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: kommander-traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: elasticsearch-workspace-stripprefixes-confluent@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: default-stripprefixes-confluent@kubernetescrd
   name: confluent-ingress
-  namespace: elasticsearch-workspace  # Must match service namespace
+  namespace: elastic-project  # Must match service namespace
 spec:
   rules:
   - http:

@@ -1,0 +1,11 @@
+https://my-elastic-cluster-es-default.elastic-project.svc.cluster.local:9200
+
+basic auth
+with credentials
+skip TLS verify
+
+user / password
+index name: my-test-index
+timefieldname: @timestamp
+version 8+
+

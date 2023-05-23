@@ -1,0 +1,68 @@
+You need to get the elastic CA and mount it into the logstash stateful set
+
+logstash / elastic certs:
+cert is a secret my-elastic-cluster-es-remote-ca
+  field: ca.crt
+
+logstash stateful set:
+
+
+spec:
+  volumes:
+    - name: configurations
+      configMap:
+        name: logstash-pipeline-0
+        defaultMode: 420
+    - name: elasticcert
+      secret:
+        secretName: my-elastic-cluster-es-remote-ca
+        defaultMode: 420
+
+volumeMounts:
+  - name: configurations
+    mountPath: /bitnami/logstash/config
+  - name: elasticcert
+    mountPath: /etc/logstash/config/certs
+
+
+
+--------
+
+input {
+  heartbeat {
+    message => "Hello from Logstash"
+    interval => 10
+    type => "hearbeat"
+  }
+}
+output {
+    kafka {
+      topic_id => "test-topic"
+      codec => "json"
+      bootstrap_servers => "kafka:9092"
+      sasl_mechanism => "PLAIN"
+      security_protocol => "SASL_SSL"
+      ssl_endpoint_identification_algorithm => ""
+    }
+}
+
+--------------------------
+
+input {
+  heartbeat {
+    message => "Hello from Logstash"
+    interval => 10
+    type => "heartbeat"
+  }
+}
+filter {
+}
+output {
+  elasticsearch {
+    index => "my-test-index"
+    hosts => "https://my-elastic-cluster-es-default:9200"
+    user => "elastic"
+    password => "elastik"
+    ssl_certificate_verification => false
+  }
+}
